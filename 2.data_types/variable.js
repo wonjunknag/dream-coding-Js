@@ -3,7 +3,7 @@
 // use this for Valina Javascript.
 "use strict";
 
-// 2. Variable
+// 2. Variable, rw(read/write)
 // let (added in ES6)
 
 let name = "ellie";
@@ -23,16 +23,22 @@ console.log(name);
 //              (has no block scope)
 //      : 어디에 선언했는지 상관없이 항상 제일위로 선언을 끌어올려주는 것.
 
-// 3. Contants (한번 값을 할당하면 절대 변하지 않는 변수)
+// 3. Contant (한번 값을 할당하면 절대 변하지 않는 변수), r(read only)
+// use const whenever possible.
+// only use let if variable needs to changes.
+const daysInWeek = 7;
+const maxNumber = 5;
+
+// Note!
+// Immutable data types: premitive types, frozen objects (i.e. object.freeze())
+// Mutable data types: all objects by default are mutable in JS
 // favor immutable data type always for a few reasons:
 //      - security
 //      - thread safety
 //      - reduce human mistakes
-// 값이 계속 변경되는 데이터 타입을  Mutable 데이터 타입이라고 한다.
-const daysInWeek = 7;
-const maxNumber = 5;
 
 // Mutable 타입의 let, Immutable 타입의 const
+// 값이 계속 변경되는 데이터 타입을  Mutable 데이터 타입이라고 한다.
 
 // 4. Variable types
 // primitive, single item : number, string, boolean, null, undefiendn, symbol
