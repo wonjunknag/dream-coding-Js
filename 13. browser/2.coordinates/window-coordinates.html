@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>coordinates</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      div {
+        background-color: thistle;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+      }
+
+      .special {
+        background-color: tomato;
+      }
+
+      aside {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="num1"></div>
+    <div class="num2"></div>
+    <div class="num3"></div>
+    <div class="num4"></div>
+    <div class="num5"></div>
+    <div class="num6"></div>
+    <div class="num7"></div>
+    <div class="num8"></div>
+    <div class="num9"></div>
+    <div class="special"></div>
+    <div class="num11"></div>
+    <div class="num12"></div>
+    <div class="num13"></div>
+    <div class="num14"></div>
+    <div class="num15"></div>
+    <aside>
+      <button class="scroll-by">Scroll by 100px(y)</button>
+      <button class="scroll-to">Scroll to 100px(y)</button>
+      <button class="scroll-into">Scroll into special</button>
+    </aside>
+    <script>
+      const special = document.querySelector(".special");
+      console.log(special.getBoundingClientRect());
+      special.addEventListener("click", (e) => {
+        console.log(`client : ${e.clientX}, ${e.clientY}`);
+        console.log(`page : ${e.pageX}, ${e.pageY}`);
+      });
+
+      const scrollBy = document.querySelector(".scroll-by");
+      const scrollTo = document.querySelector(".scroll-to");
+      const scrollInto = document.querySelector(".scroll-into");
+
+      scrollBy.addEventListener("click", () => {
+        window.scrollBy({ top: 100, left: 0, behavior: "smooth" });
+      });
+      scrollTo.addEventListener("click", () => {
+        window.scrollTo(0, 100);
+      });
+      scrollInto.addEventListener("click", () => {
+        special.scrollIntoView();
+      });
+    </script>
+  </body>
+</html>
