@@ -31,37 +31,38 @@
   <body>
     <section class="section">
       <button class="find-btn">Find a rabbit</button>
-      <img class="a1" src="img/carrot.png" alt="" />
-      <img class="a2" src="img/carrot.png" alt="" />
-      <img class="a3" src="img/carrot.png" alt="" />
-      <img class="a4" src="img/carrot.png" alt="" />
-      <img class="a5" src="img/carrot.png" alt="" />
-      <img class="a6" src="img/carrot.png" alt="" />
-      <img class="a7" src="img/carrot.png" alt="" />
-      <img class="a8" src="img/carrot.png" alt="" />
-      <img class="a9" src="img/carrot.png" alt="" />
-      <img class="a10" src="img/carrot.png" alt="" />
-      <img class="a11" src="img/carrot.png" alt="" />
-      <img class="a12" src="img/carrot.png" alt="" />
-      <img class="a13" src="img/carrot.png" alt="" />
-      <img class="a14" src="img/carrot.png" alt="" />
-      <img class="a15" src="img/carrot.png" alt="" />
-      <img class="a16" src="img/carrot.png" alt="" />
-      <img class="a17" src="img/rabbit.png" alt="" />
-      <img class="a18" src="img/carrot.png" alt="" />
-      <img class="a19" src="img/carrot.png" alt="" />
-      <img class="a20" src="img/carrot.png" alt="" />
-      <img class="a21" src="img/carrot.png" alt="" />
-      <img class="a22" src="img/carrot.png" alt="" />
+      <img src="img/carrot.png" alt="carrot" />
+      <img src="img/carrot.png" alt="carrot" />
+      <img src="img/carrot.png" alt="carrot" />
+      <img src="img/carrot.png" alt="carrot" />
+      <img src="img/carrot.png" alt="carrot" />
+      <img src="img/carrot.png" alt="carrot" />
+      <img src="img/carrot.png" alt="carrot" />
+      <img src="img/carrot.png" alt="carrot" />
+      <img src="img/carrot.png" alt="carrot" />
+      <img src="img/carrot.png" alt="carrot" />
+      <img src="img/carrot.png" alt="carrot" />
+      <img src="img/carrot.png" alt="carrot" />
+      <img src="img/carrot.png" alt="carrot" />
+      <img src="img/carrot.png" alt="carrot" />
+      <img src="img/carrot.png" alt="carrot" />
+      <img src="img/carrot.png" alt="carrot" />
+      <img class="rabbit" src="img/rabbit.png" alt="rabbitRect" />
+      <img src="img/carrot.png" alt="carrot" />
+      <img src="img/carrot.png" alt="carrot" />
+      <img src="img/carrot.png" alt="carrot" />
+      <img src="img/carrot.png" alt="carrot" />
+      <img src="img/carrot.png" alt="carrot" />
     </section>
     <script>
       const findBtn = document.querySelector(".find-btn");
-      const rabbit = document.querySelector(".a17");
-      console.log(rabbit.getBoundingClientRect());
-      const rabbitRect = window.scrollY + rabbit.getBoundingClientRect().top;
+      const rabbit = document.querySelector(".rabbit");
 
       findBtn.addEventListener("click", (event) => {
-        scrollTo({ top: rabbitRect, left: 0, behavior: "smooth" });
+        rabbit.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
       });
     </script>
   </body>
